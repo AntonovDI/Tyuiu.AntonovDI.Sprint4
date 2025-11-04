@@ -9,7 +9,7 @@ namespace Tyuiu.AntonovDI.Sprint4.Task2.V22.Lib
             int count = 1;
             for (int i = 0; i <= array.Length - 1; i++)
             {
-                if (array[i] % 2 == 0)
+                if (array[i] % 2 != 0)
                 {
                     count *= array[i];
                 }
