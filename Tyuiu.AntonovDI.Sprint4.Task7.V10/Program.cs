@@ -1,4 +1,4 @@
-﻿using Tyuiu.AntonovDI.Sprint4.Task6.V4.Lib;
+﻿using Tyuiu.AntonovDI.Sprint4.Task7.V10.Lib;
 
 internal class Program
 {
@@ -6,30 +6,38 @@ internal class Program
     {
         DataService ds = new DataService();
         Console.Title = "Спринт #4 | Выполнил: Антонов Д. И. | ИСТНб-25-1";
-
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Спринт #4                                                               *");
-        Console.WriteLine("* Тема: Класс Array                                                       *");
-        Console.WriteLine("* Задание #6                                                              *");
-        Console.WriteLine("* Вариант #4                                                              *");
+        Console.WriteLine("* Тема: Добавление к решению итоговых проектов по спринту                 *");
+        Console.WriteLine("* Задание #7                                                              *");
+        Console.WriteLine("* Вариант #10                                                             *");
         Console.WriteLine("* Выполнил: Антонов Даниил Иванович | ИСТНб-25-1                          *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
-        Console.WriteLine("* Дан строковый массив данных ['Москва', 'Санкт Петербург', 'Новосибирск',*");
-        Console.WriteLine("* 'Екатеринбург', 'Нижний Новгород', 'Казахстан', 'Самара'], используя    *");  
-        Console.WriteLine("* класс Array, выведите элементы массива, длина которых меньше 7 символов.*");
+        Console.WriteLine("* Дана строка из одноразрядных цифр '695847142536'. Преобразуйте ее       *");
+        Console.WriteLine("* в матрицу 3 на 4 и подсчитайте сумму нечетных чисел.                    *");
         Console.WriteLine("*                                                                         *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-
-        string[] mas = { "Москва", "Санкт Петербург", "Новосибирск", "Екатеринбург", "Нижний Новгород", "Казахстан", "Самара" };
-
+        string value = "695847142536";
+        int n, m; n = 3; m = 4;
+        int[,] matrix = new int[n, m];
+        int ind = 0;
+        Console.WriteLine("Массив: ");
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                Console.Write($"{value[ind]} \t");
+                ind++;
+            }
+            Console.WriteLine();
+        }
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-
-        string[] res = ds.Calculate(mas);
+        int res = ds.Calculate(n, m, value);
         Console.WriteLine("Результат выполнения программы: ");
         Console.WriteLine(res);
     }
