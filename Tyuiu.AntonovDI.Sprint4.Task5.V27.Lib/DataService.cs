@@ -2,7 +2,7 @@
 
 namespace Tyuiu.AntonovDI.Sprint4.Task5.V27.Lib
 {
-    public class DataService : ISprint4Task4V27
+    public class DataService : ISprint4Task5V27
     {
         public int Calculate(int[,] matrix)
         {
